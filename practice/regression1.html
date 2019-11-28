@@ -1,0 +1,204 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-90303884-1', 'auto');
+  ga('send', 'pageview');
+
+</script> <!-- Google Analytics ends -->
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Pratice Calculating Regression Coefficients - Number Munch</title>
+
+<link href="../css/main.css" rel="stylesheet" type="text/css" media="all" />
+
+</head>
+
+<body>
+
+<div id="wrapper">
+	
+    
+    	<div id="header">
+				<div id="logo">
+						<a href = "../index.html"><img src="../img/logo.png" width="450" height="42" alt="Number Munch" /></a>
+				</div> <!-- logo ends -->
+        
+        		<div id="nav">
+						<p><a href = "../index.html">home</a> | <a href = "index.html">practice</a> | <a href = "../about.html">about</a> | <a href = "../contact.html">contact</a></p>
+				</div> <!-- nav ends -->
+        
+		</div> <!-- header ends -->
+    
+    	
+        <div id="left">
+        		<p>Complete all the steps for calculating the regression coffiecients of:</p>
+                <p>x = <span id="xo"></span></p> 
+                <p>y = <span id="yo"></span></p>     
+                
+                <p>&nbsp;</p>   
+                
+                <p>x&#772 = <span id="mxo"></span></p> 
+                <p>y&#772 = <span id="myo"></span></p> 
+                <p>S<sup>2</sup><sub>x</sub> = <span id="vxo"></span></p> 
+                <p>S<sup>2</sup><sub>y</sub> = <span id="vyo"></span></p>  
+                
+                <p>&nbsp;</p>           
+                    
+                <p>Round all answers to two decimal places.</p>
+                
+                <p>&nbsp;</p>
+                
+                <b>Slope (b<sub>1</sub>) = </b>
+                
+                <p>x =</p>
+                <p>
+                    <input type="text" id="x1" class="smallInput" onchange="checkInput(x[0], 'x1');"/>
+                    <input type="text" id="x2" class="smallInput" onchange="checkInput(x[1], 'x2');"/>
+                    <input type="text" id="x3" class="smallInput" onchange="checkInput(x[2], 'x3');"/>
+                    <input type="text" id="x4" class="smallInput" onchange="checkInput(x[3], 'x4');"/>
+                    <input type="text" id="x5" class="smallInput" onchange="checkInput(x[4], 'x5');"/>
+                </p>
+                
+                
+                <p>x&#772 = </p>
+                <p>
+                	<input type="text" id="mx" class="smallInput" onchange="checkInput(mx, 'mx');"/>
+                </p>
+                
+                <p>x - x&#772 = </p>
+                <p>
+                    <input type="text" id="dx1" class="smallInput" onchange="checkInput(dx[0], 'dx1');"/>
+                    <input type="text" id="dx2" class="smallInput" onchange="checkInput(dx[1], 'dx2');"/>
+                    <input type="text" id="dx3" class="smallInput" onchange="checkInput(dx[2], 'dx3');"/>
+                    <input type="text" id="dx4" class="smallInput" onchange="checkInput(dx[3], 'dx4');"/>
+                    <input type="text" id="dx5" class="smallInput" onchange="checkInput(dx[4], 'dx5');"/>
+                </p>
+                
+                
+                <p>&nbsp;</p>
+                
+                <p>y =</p>
+                <p>
+                    <input type="text" id="y1" class="smallInput" onchange="checkInput(y[0], 'y1');"/>
+                    <input type="text" id="y2" class="smallInput" onchange="checkInput(y[1], 'y2');"/>
+                    <input type="text" id="y3" class="smallInput" onchange="checkInput(y[2], 'y3');"/>
+                    <input type="text" id="y4" class="smallInput" onchange="checkInput(y[3], 'y4');"/>
+                    <input type="text" id="y5" class="smallInput" onchange="checkInput(y[4], 'y5');"/>
+                </p>
+                
+                
+                <p>y&#772 = </p>
+                <p>
+                	<input type="text" id="my" class="smallInput" onchange="checkInput(my, 'my');"/>
+                </p>
+                
+                <p>y - y&#772 = </p>
+                <p>
+                    <input type="text" id="dy1" class="smallInput" onchange="checkInput(dy[0], 'dy1');"/>
+                    <input type="text" id="dy2" class="smallInput" onchange="checkInput(dy[1], 'dy2');"/>
+                    <input type="text" id="dy3" class="smallInput" onchange="checkInput(dy[2], 'dy3');"/>
+                    <input type="text" id="dy4" class="smallInput" onchange="checkInput(dy[3], 'dy4');"/>
+                    <input type="text" id="dy5" class="smallInput" onchange="checkInput(dy[4], 'dy5');"/>
+                </p>
+                
+                <p>&nbsp;</p>
+                
+                <p>(x - x&#772)(y - y&#772) = </p>
+                <p>
+                    <input type="text" id="xy1" class="smallInput" onchange="checkInput(xy[0], 'xy1');"/>
+                    <input type="text" id="xy2" class="smallInput" onchange="checkInput(xy[1], 'xy2');"/>
+                    <input type="text" id="xy3" class="smallInput" onchange="checkInput(xy[2], 'xy3');"/>
+                    <input type="text" id="xy4" class="smallInput" onchange="checkInput(xy[3], 'xy4');"/>
+                    <input type="text" id="xy5" class="smallInput" onchange="checkInput(xy[4], 'xy5');"/>
+                </p>
+                
+                
+                <p>&Sigma;(x - x&#772)(y - y&#772) = </p>
+                <p>
+                	<input type="text" id="xys" class="smallInput" onchange="checkInput(xys, 'xys');"/>
+                </p>
+                
+                <p>&Sigma;(x - x&#772)(y - y&#772) / (n - 1) = </p>
+                <p>
+                	<input type="text" id="cov" class="smallInput" onchange="checkInput(cov, 'cov');"/>
+                </p>
+                
+                <p>b<sub>1</sub> = [&Sigma;(x - x&#772)(y - y&#772) / (n - 1)] / S<sup>2</sup><sub>x</sub>) = </p>
+                <p>
+                	<input type="text" id="b1" class="smallInput" onchange="checkInput(b1, 'b1');"/>
+                </p>
+                
+                
+                
+                
+                <p>&nbsp;</p>
+                
+                <b>y Intercept (b<sub>0</sub>) = </b>
+                
+                <p>b<sub>0</sub> = y&#772 - b<sub>1</sub>x&#772 =</p>
+                <p>
+                    <input type="text" id="b0" class="smallInput" onchange="checkInput(b0, 'b0');"/>
+                </p>
+                
+                
+                
+                
+                
+                <p>&nbsp;</p>  
+                <p><button type="button" onclick="ClearFields();">New Question</button></p>
+                
+                
+                <p>&nbsp;</p>  
+                <p>&nbsp;</p>  
+                <p>&nbsp;</p>  
+               
+                
+                            
+                
+                <script src="../js/functions.js"></script> 
+                <script src="../js/regression1.js"></script>
+                
+                
+        </div> <!-- left ends -->
+        
+        
+        <div id="right">
+        	<h2>keep practicing:</h2>
+            
+               
+                
+                
+                
+                <h3>8: effect size</h3>
+                <ul>
+                	<li><a href = "effectsize1.html">effect size 1</a></li>
+                </ul>                
+
+                <br>
+                
+                <h3>9: confidence intervals</h3>
+                <ul>
+                	<li><a href = "ci1.html">confidence intervals 1</a></li>
+                </ul>  
+    
+           
+            
+            
+        </div> <!-- right ends -->
+
+    
+</div> <!-- wrapper ends -->
+<!--Add This -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-587ae1ea4fcccd1c"></script>
+
+</body>
+</html>

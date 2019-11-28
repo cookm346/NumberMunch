@@ -1,0 +1,278 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-90303884-1', 'auto');
+  ga('send', 'pageview');
+
+</script> <!-- Google Analytics ends -->
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Pratice Calculating F (Between Subjects ANOVA) - Number Munch</title>
+
+<link href="../css/main.css" rel="stylesheet" type="text/css" media="all" />
+
+</head>
+
+<body>
+
+<div id="wrapper">
+	
+    
+    	<div id="header">
+				<div id="logo">
+						<a href = "../index.html"><img src="../img/logo.png" width="450" height="42" alt="Number Munch" /></a>
+				</div> <!-- logo ends -->
+        
+        		<div id="nav">
+						<p><a href = "../index.html">home</a> | <a href = "index.html">practice</a> | <a href = "../about.html">about</a> | <a href = "../contact.html">contact</a></p>
+				</div> <!-- nav ends -->
+        
+		</div> <!-- header ends -->
+    
+    	
+        <div id="left">
+        		<p>Complete all the steps for calculating the F ratio for the difference in means between the two groups:</p>
+                <p>Control group: <span id="y1"></span></p>    
+                <p>Treatment group: <span id="y2"></span></p>    
+                <p>&nbsp;</p>             
+                    
+                <p>Round all answers to two decimal places.</p>
+                
+                <p>&nbsp;</p>
+                <p><b>Sum of squares total:</b></p>
+                
+                <p>Y<sub>1</sub> =</p>
+                <p>
+                    <input type="text" id="y1_1" class="smallInput" onchange="checkInput(y1[0], 'y1_1');"/>
+                    <input type="text" id="y1_2" class="smallInput" onchange="checkInput(y1[1], 'y1_2');"/>
+                    <input type="text" id="y1_3" class="smallInput" onchange="checkInput(y1[2], 'y1_3');"/>
+                    <input type="text" id="y1_4" class="smallInput" onchange="checkInput(y1[3], 'y1_4');"/>
+                </p>
+                
+                <p>Y<sub>2</sub> =</p>
+                <p>
+                    <input type="text" id="y2_1" class="smallInput" onchange="checkInput(y2[0], 'y2_1');"/>
+                    <input type="text" id="y2_2" class="smallInput" onchange="checkInput(y2[1], 'y2_2');"/>
+                    <input type="text" id="y2_3" class="smallInput" onchange="checkInput(y2[2], 'y2_3');"/>
+                    <input type="text" id="y2_4" class="smallInput" onchange="checkInput(y2[3], 'y2_4');"/>
+                </p>
+                
+                
+                <p><span class="bar">Y</span><sub>T</sub> (Grand mean) =</p>
+                <p>
+                	<input type="text" id="gm" class="smallInput" onchange="checkInput(gm, 'gm');"/>
+                </p>
+    
+    
+                <p>Y<sub>i</sub> - <span class="bar">Y</span><sub>T</sub> =</p>
+                <p>
+                    <input type="text" id="d1" class="smallInput" onchange="checkInput(d[0], 'd1');"/>
+                    <input type="text" id="d2" class="smallInput" onchange="checkInput(d[1], 'd2');"/>
+                    <input type="text" id="d3" class="smallInput" onchange="checkInput(d[2], 'd3');"/>
+                    <input type="text" id="d4" class="smallInput" onchange="checkInput(d[3], 'd4');"/>
+                </p>
+                
+                <p>
+                    <input type="text" id="d5" class="smallInput" onchange="checkInput(d[4], 'd5');"/>
+                    <input type="text" id="d6" class="smallInput" onchange="checkInput(d[5], 'd6');"/>
+                    <input type="text" id="d7" class="smallInput" onchange="checkInput(d[6], 'd7');"/>
+                    <input type="text" id="d8" class="smallInput" onchange="checkInput(d[7], 'd8');"/>
+                </p>
+    
+    
+                <p>(Y<sub>i</sub> - <span class="bar">Y</span>)<sup>2</sup> =</p>
+                <p>
+                    <input type="text" id="d2_1" class="smallInput" onchange="checkInput(d2[0], 'd2_1');"/>
+                    <input type="text" id="d2_2" class="smallInput" onchange="checkInput(d2[1], 'd2_2');"/>
+                    <input type="text" id="d2_3" class="smallInput" onchange="checkInput(d2[2], 'd2_3');"/>
+                    <input type="text" id="d2_4" class="smallInput" onchange="checkInput(d2[3], 'd2_4');"/>
+                </p>
+                
+                <p>
+                    <input type="text" id="d2_5" class="smallInput" onchange="checkInput(d2[4], 'd2_5');"/>
+                    <input type="text" id="d2_6" class="smallInput" onchange="checkInput(d2[5], 'd2_6');"/>
+                    <input type="text" id="d2_7" class="smallInput" onchange="checkInput(d2[6], 'd2_7');"/>
+                    <input type="text" id="d2_8" class="smallInput" onchange="checkInput(d2[7], 'd2_8');"/>
+                </p>
+    
+    
+                
+                <p>&Sigma;(Y<sub>i</sub> - <span class="bar">Y</span><sub>T</sub>)<sup>2</sup> =</p>
+                <p>
+                	<input type="text" id="sst" class="smallInput" onchange="checkInput(sst, 'sst');"/>
+                </p>
+                
+                
+                
+                
+                <p>&nbsp;</p>
+                
+                <p><b>Sum of squares between:</b></p>
+                
+                <p><span class="bar">Y</span><sub>1</sub> =</p>
+                <p>
+                	<input type="text" id="y1m" class="smallInput" onchange="checkInput(y1m, 'y1m');"/>
+                </p>
+                
+                <p><span class="bar">Y</span><sub>2</sub> =</p>
+                <p>
+                	<input type="text" id="y2m" class="smallInput" onchange="checkInput(y2m, 'y2m');"/>
+                </p>
+                
+                
+                <p><span class="bar">Y</span><sub>i</sub> - <span class="bar">Y</span><sub>T</sub> =</p>
+                <p>
+                	<input type="text" id="y1_m" class="smallInput" onchange="checkInput(y1_m, 'y1_m');"/>
+                    <input type="text" id="y2_m" class="smallInput" onchange="checkInput(y2_m, 'y2_m');"/>
+                </p>
+                
+                
+                <p>(<span class="bar">Y</span><sub>i</sub> - <span class="bar">Y</span><sub>T</sub>)<sup>2</sup> =</p>
+                <p>
+                	<input type="text" id="y1_m2" class="smallInput" onchange="checkInput(y1_m2, 'y1_m2');"/>
+                    <input type="text" id="y2_m2" class="smallInput" onchange="checkInput(y2_m2, 'y2_m2');"/>
+                </p>
+                
+                <p>&Sigma;(<span class="bar">Y</span><sub>i</sub> - <span class="bar">Y</span><sub>T</sub>)<sup>2</sup> =</p>
+                <p>
+                	<input type="text" id="ssbn" class="smallInput" onchange="checkInput(ssbn, 'ssbn');"/>
+                </p>
+                
+                <p>n &Sigma;(<span class="bar">Y</span><sub>i</sub> - <span class="bar">Y</span><sub>T</sub>)<sup>2</sup> =</p>
+                <p>
+                	<input type="text" id="ssb" class="smallInput" onchange="checkInput(ssb, 'ssb');"/>
+                </p>                
+                
+                
+                
+                
+                
+                <p>&nbsp;</p>
+                
+                <p><b>Sum of squares within:</b></p>
+                
+                <p>Y<sub>i</sub> - <span class="bar">Y</span><sub>1</sub> =</p>
+                <p>
+                	<input type="text" id="y1w1" class="smallInput" onchange="checkInput(y1w[0], 'y1w1');"/>
+                    <input type="text" id="y1w2" class="smallInput" onchange="checkInput(y1w[1], 'y1w2');"/>
+                    <input type="text" id="y1w3" class="smallInput" onchange="checkInput(y1w[2], 'y1w3');"/>
+                    <input type="text" id="y1w4" class="smallInput" onchange="checkInput(y1w[3], 'y1w4');"/>
+                </p>
+                
+                <p>Y<sub>i</sub> - <span class="bar">Y</span><sub>2</sub> =</p>
+                <p>
+                	<input type="text" id="y2w1" class="smallInput" onchange="checkInput(y2w[0], 'y2w1');"/>
+                    <input type="text" id="y2w2" class="smallInput" onchange="checkInput(y2w[1], 'y2w2');"/>
+                    <input type="text" id="y2w3" class="smallInput" onchange="checkInput(y2w[2], 'y2w3');"/>
+                    <input type="text" id="y2w4" class="smallInput" onchange="checkInput(y2w[3], 'y2w4');"/>
+                </p>
+                
+                
+                <p>(Y<sub>i</sub> - <span class="bar">Y</span><sub>1</sub>)<sup>2</sup> =</p>
+                <p>
+                	<input type="text" id="y1w21" class="smallInput" onchange="checkInput(y1w2[0], 'y1w21');"/>
+                    <input type="text" id="y1w22" class="smallInput" onchange="checkInput(y1w2[1], 'y1w22');"/>
+                    <input type="text" id="y1w23" class="smallInput" onchange="checkInput(y1w2[2], 'y1w23');"/>
+                    <input type="text" id="y1w24" class="smallInput" onchange="checkInput(y1w2[3], 'y1w24');"/>
+                </p>
+                
+                <p>(Y<sub>i</sub> - <span class="bar">Y</span><sub>2</sub>)<sup>2</sup> =</p>
+                <p>
+                	<input type="text" id="y2w21" class="smallInput" onchange="checkInput(y2w2[0], 'y2w21');"/>
+                    <input type="text" id="y2w22" class="smallInput" onchange="checkInput(y2w2[1], 'y2w22');"/>
+                    <input type="text" id="y2w23" class="smallInput" onchange="checkInput(y2w2[2], 'y2w23');"/>
+                    <input type="text" id="y2w24" class="smallInput" onchange="checkInput(y2w2[3], 'y2w24');"/>
+                </p>
+                
+                
+                <p>&Sigma;(Y<sub>i</sub> - <span class="bar">Y</span><sub>j</sub>)<sup>2</sup> = </p>
+                <p>
+                	<input type="text" id="ssw" class="smallInput" onchange="checkInput(ssw, 'ssw');"/>
+                </p>
+                
+                
+                
+                <p>&nbsp;</p>
+                <p><b>Degrees of freedom:</b></p>
+                
+                <p>df<sub>total</sub> =</p>
+                <p>
+                	<input type="text" id="dft" class="smallInput" onchange="checkInput(dft, 'dft');"/>
+                </p>
+                <p>df<sub>between</sub> =</p>
+                <p>
+                	<input type="text" id="dfb" class="smallInput" onchange="checkInput(dfb, 'dfb');"/>
+                </p>
+                <p>df<sub>within</sub> =</p>
+                <p>
+                	<input type="text" id="dfw" class="smallInput" onchange="checkInput(dfw, 'dfw');"/>
+                </p>
+                
+                
+                
+                
+                <p>&nbsp;</p>
+                <p><b>Mean squares:</b></p>
+                
+                <p>MS<sub>between</sub> =</p>
+                <p>
+                	<input type="text" id="msb" class="smallInput" onchange="checkInput(msb, 'msb');"/>
+                </p>
+                
+                <p>MS<sub>within</sub> =</p>
+                <p>
+                	<input type="text" id="msw" class="smallInput" onchange="checkInput(msw, 'msw');"/>
+                </p>
+                
+                
+                
+                <p>&nbsp;</p>
+                <p><b>F ratio:</b></p>
+                
+                <p>F =</p>
+                <p>
+                	<input type="text" id="f" class="smallInput" onchange="checkInput(f, 'f');"/>
+                </p>
+                
+                
+                
+                <p>&nbsp;</p>  
+                <p><button type="button" onclick="ClearFields();">New Question</button></p>
+                
+                
+                <p>&nbsp;</p>  
+                <p>&nbsp;</p>  
+                <p>&nbsp;</p>  
+               
+                
+                            
+                
+                <script src="../js/functions.js"></script> 
+                <script src="../js/anova1.js"></script>
+                
+                
+        </div> <!-- left ends -->
+        
+        
+        <div id="right">
+
+            
+            
+        </div> <!-- right ends -->
+
+    
+</div> <!-- wrapper ends -->
+<!--Add This -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-587ae1ea4fcccd1c"></script>
+
+</body>
+</html>

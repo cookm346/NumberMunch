@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-90303884-1', 'auto');
+  ga('send', 'pageview');
+
+</script> <!-- Google Analytics ends -->
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Practice Calculating Effect Size - Number Munch</title>
+
+<link href="../css/main.css" rel="stylesheet" type="text/css" media="all" />
+
+</head>
+
+<body>
+
+<div id="wrapper">
+	
+    
+    	<div id="header">
+				<div id="logo">
+						<a href = "../index.html"><img src="../img/logo.png" width="450" height="42" alt="Number Munch" /></a>
+				</div> <!-- logo ends -->
+        
+        		<div id="nav">
+						<p><a href = "../index.html">home</a> | <a href = "index.html">practice</a> | <a href = "../about.html">about</a> | <a href = "../contact.html">contact</a></p>
+				</div> <!-- nav ends -->
+        
+		</div> <!-- header ends -->
+    
+    	
+        <div id="left">
+                    <p>The mean number of questions answered correctly by population 1 is <span id="m1"></span>, and the mean number of questions answered correctly by population 1 is <span id="m2"></span>. The stndard deviation of the populations is <span id="s"></span>.</p>
+
+                    <p>What is the effect size (Cohen's d)? </br> Round to two decimal places.</p>
+                    
+                    
+                    <input id="answer" value="" autocomplete="off" />
+                    
+                    <button onclick="checkanswer(ef)">Check answer</button>
+                    
+                    <p id="answer_output">&nbsp;</p>
+                    
+                    
+                    <script src="../js/functions.js"></script> 
+                    <script src="../js/effectsize1.js"></script>
+        </div> <!-- left ends -->
+        
+        
+        <div id="right">
+        	<h2>keep practicing:</h2>
+                
+
+                
+                <h3>9: confidence intervals</h3>
+                <ul>
+                	<li><a href = "ci1.html">confidence intervals 1</a></li>
+                </ul>  
+    
+                <br>
+                
+                <h3>10: t tests</h3>
+                <ul>
+                	<li><a href = "ttest1.html">one sample t test 1</a></li>
+                    <li><a href = "ttest2.html">one sample t test 2</a></li>
+                    <li><a href = "ttest3.html">one sample t test 3</a></li>
+                    <li><a href = "ttest4.html">dependent samples t test 1</a></li>
+                    <li><a href = "ttest5.html">indepdendent samples t test 1</a></li>
+                </ul>  
+            
+            
+        </div> <!-- right ends -->
+
+    
+</div> <!-- wrapper ends -->
+<!--Add This -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-587ae1ea4fcccd1c"></script>
+
+</body>
+</html>
